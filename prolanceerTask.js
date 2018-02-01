@@ -46,7 +46,18 @@ var app = angular.module('myApp', []);
 					yAxes: [{
 						ticks: {
 							beginAtZero:true
-						}
+						},
+						scaleLabel: {
+                            display: true,
+                            labelString: 'Price In USD'
+                        }
+					}],
+					xAxes: [{
+						
+						scaleLabel: {
+                            display: true,
+                            labelString: 'Currency Name'
+                        }
 					}]
 				}
 			}
