@@ -6,6 +6,7 @@ var app = angular.module('myApp', []);
 			$http.get("https://api.coinmarketcap.com/v1/ticker/?limit=10")
 		  .then(function(response) {
 				$scope.getDataList = response.data;
+				alert("Refreshed every 5 minutes");
 		  })
 		  //alert(2412);
 		}
