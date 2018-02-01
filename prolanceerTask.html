@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title></title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.min.js"></script>
+	  <script src="prolanceerTask.js"></script>
+	  <link rel="stylesheet" href="prolanceerTask.css">
+	</head>
+	<body>
+
+		<div ng-app="myApp" ng-controller="myCtrl"> 
+		   
+			<div class="row">
+				<h1 class="barchart-head"> Barchart for crypto currencies</h1>
+				<div class="col-md-offset-2 col-md-6">
+					<canvas id="barchart" width="400" height="200"></canvas>
+				</div>
+			</div>
+			<div class="row">
+				<h1 class="barchart-head"> Display Data</h1>
+				<div class="col-md-offset-1 col-md-10">
+					<table class="table table-hover table-bordered">
+						<tr>
+							<th>Name </th>
+							<th>Rank </th>
+							<th>Symbol</th>
+							<th>Price USD </th>
+							<th>price_btc </th>
+							
+						</tr>
+						<tr ng-repeat="data in getDataList ">
+							<td>{{data.name}}</td>
+							<td>{{data.rank}}</td>
+							<td>{{data.symbol}}</td>
+							<td>{{data.price_usd}}</td>
+							<td>{{data.price_usd}}</td>
+						</tr>
+						
+					</table>
+				</div>
+			</div>
+			
+		</div>
+
+	</body>
+</html>
